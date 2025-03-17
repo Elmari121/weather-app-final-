@@ -1,67 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Italiana&family=Lobster&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@1,200..900&display=swap");
-    </style>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>weather app</title>
+    ,
     <link rel="stylesheet" href="style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <title>Weather App</title>
   </head>
   <body>
-    <div class="weatherapp">
-      <header>
-        <form class="search-form" id="search-form">
-          <input
-            type="search"
-            placeholder="Enter a city"
-            required
-            id="search-form-input"
-            class="search-form-input"
-          />
-          <input type="submit" value="Search" class="search-form-button" />
-        </form>
-      </header>
-      <main>
-        <div class="weather-app-data">
-          <div>
-            <h1 class="weather-app-city" id="city">Paris</h1>
-            <p class="weather-app-details" id="description">
-              Tuesday 14:49, scattered clouds
-              <br />
-              Humidity: <strong id="humidity">66%</strong>, Wind:
-              <strong id="wind-speed">3.13 km/h</strong>
-            </p>
-          </div>
-          <div class="weather-app-temp-container">
-            <div class="weather-app-icon" id="icon">🌥️</div>
-            <div class="weather-app-temp" id="temperature">12</div>
-            <div class="weather-app-unit">°C</div>
-          </div>
-          <p id="time">Tuesday 14:49</p>
-        </div>
-      </main>
-      <footer>
-        Coded by
-        <a href="https://github.com/Elmari121" target="_blank"
-          >Elmari de Villiers</a
-        >
-        <br />
-        div>Code hosted on GitHub
-        <a
-          href="https://github.com/Elmari121/weatherappshecodesweek6"
-          target="_blank"
-          >GitHub Repo</a
-        >
-        <br />
-        Website hosted on Netlify
-        <a href="https://myweatherappweek7.netlify.app/" target="_blank"
-          >Visit Website</a
-        >
-      </footer>
+    <div id="weather-container">
+      <h2>weather app</h2>
+      <input type="text" id="city" placeholder="Enter city" />
+      <button onclick="getweather()">search</button>
+      <img id="weather-icon" alt="weather-icon" />
+      <div id="temp-div"></div>
+      <div id="weather-info"></div>
+      <div id="hourly-forcast"></div>
     </div>
-    <script src="index.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
