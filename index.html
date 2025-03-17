@@ -7,7 +7,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Weather App</title>
   </head>
   <body>
@@ -28,17 +28,19 @@
         <div class="weather-app-data">
           <div>
             <h1 class="weather-app-city" id="city">Paris</h1>
-            <p class="weather-app-details">
+            <p class="weather-app-details" id="description">
               Tuesday 14:49, scattered clouds
               <br />
-              Humidity: <strong>66%</strong>, Wind: <strong>3.13 km/h</strong>
+              Humidity: <strong id="humidity">66%</strong>, Wind:
+              <strong id="wind-speed">3.13 km/h</strong>
             </p>
           </div>
           <div class="weather-app-temp-container">
-            <div class="weather-app-icon">🌥️</div>
-            <div class="weather-app-temp">12</div>
+            <div class="weather-app-icon" id="icon">🌥️</div>
+            <div class="weather-app-temp" id="temperature">12</div>
             <div class="weather-app-unit">°C</div>
           </div>
+          <p id="time">Tuesday 14:49</p>
         </div>
       </main>
       <footer>
@@ -47,7 +49,7 @@
           >Elmari de Villiers</a
         >
         <br />
-        Code hosted on GitHub
+        div>Code hosted on GitHub
         <a
           href="https://github.com/Elmari121/weatherappshecodesweek6"
           target="_blank"
